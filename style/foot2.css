@@ -1,0 +1,42 @@
+#footreward {
+    height: 70px;
+    width: 100%;
+    margin: auto;
+    font-size: 50px;
+    text-align: center;
+    line-height: 1.42857;
+    font-weight: 400;
+    background-image: url("https://s3.images-iherb.com/cms/banners/Currency-Partial@1440w55h.png");
+  }
+  #footinfo {
+    padding: 0px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-content: space-around;
+    padding: 1%;
+  }
+  #about,
+  #company,
+  #reso,
+  #custo,
+  #mobile {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 5%;
+
+    /* text-align: center; */
+  }
+
+  #mobile > img {
+    height: 50%;
+    width: 60%;
+    /* margin: auto; */
+  }
+  .atxt {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }

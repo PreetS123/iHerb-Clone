@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shipping</title>
+    <style>
+        #shipping{
+            height: 600px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 50% 30%;
+            justify-content: space-between;
+            border:  1px solid red;
+        }
+        #shipinfo{
+            border: 1px solid black;
+           display: block;
+           padding: 2%;
+           font-size: 20px;
+        }
+       
+        #shipinfo>div>input{
+            height: 30px;
+            width: 100%;
+            margin:10px auto;
+        }
+        #radio{
+            width: 20% !important;
+        }
+        #country,#sub{
+            width: 100%;
+            height: 40px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+      <div id="shipping">
+         <div id="shipinfo">
+             <div>
+                  <input type="radio" id="radio">Add a New Shipping Address
+                </div>
+                <hr>
+
+
+                <div>
+                <select id="country">
+                    <option value="US">United Kingdom</option>
+                    <option value="Russia">Russia</option>
+                    <option value="India">India</option>
+                    <option value="China">China</option>
+                </select>
+            </div>
+
+            <div>
+                <input type="text" placeholder="Full Name *" id="user" required>
+                <input type="email" placeholder="Address Line1 *" id="add1" required>
+                <input type="email" placeholder="Address Line2" id="add2">
+                <input type="text" placeholder="City *" id="city" required>
+                <input type="text" placeholder="State/Region*" id="state" required>
+                <input type="number" placeholder="Zip/Postal Code*" required>
+                <input type="number" placeholder="Mobile Number*" required>
+                <!-- <input type="submit" value="SUBMIT" id="sub"> -->
+                <button onclick="window.location.href='payment.html'">SUBMIT</button>
+            </div>
+
+         </div>
+         <div id="shipdisc">
+                   
+         </div>
+      </div>
+       
+</body>
+</html>
+<script>
+</script>

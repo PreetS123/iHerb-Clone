@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>SignIn</title>
+    <style>
+      #signIn_container {
+        margin: 100px auto;
+        width: 50%;
+        height: 600px;
+        border: 1px solid red;
+        font-family: "Roboto", sans-serif;
+        padding: 2%;
+      }
+      #signIn_container > h1 {
+        color: #458500;
+        text-align: center;
+      }
+      #signIn_container > h3 {
+        color: #5d6158;
+        text-align: center;
+      }
+      #signin {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 4%;
+        height: 70%;
+        border-radius: 20px;
+        border: 1px solid rgb(126, 123, 123);
+      }
+      .sinn1 {
+        border-right: 1px solid grey;
+        padding: 2%;
+      }
+      .sinn2 {
+        padding: 2%;
+      }
+      input {
+        width: 90%;
+        height: 40px;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="signIn_container">
+      <h1>iHerb</h1>
+      <h3>Trusted brands , Healthy rewards</h3>
+      <div id="signin">
+        <div class="sinn1">
+          <form id="frm">
+            <input type="email" placeholder="Enter Your Email" id="email" />
+            <input
+              type="password"
+              placeholder="Enter Your Password"
+              id="pass"
+            />
+            <input type="submit" value="SignIn" />
+          </form>
+        </div>
+        <div class="sinn2">
+          <h4>With an iHerb account, you ,can</h4>
+          <p>
+            <span class="material-icons"> assignment </span>Subscribe to your
+            favorite products
+          </p>
+          <p>
+            <span class="material-icons"> workspace_premium </span>Earn Rewards
+            to use towars purchase
+          </p>
+          <p>
+            <span class="material-icons"> airport_shuttle </span>Track and
+            manage your orders
+          </p>
+          <p>
+            <span class="material-icons"> discount </span>Get exclusive offers
+            and discount
+          </p>
+          <p>
+            <span class="material-icons"> book </span>Create multiple wishlist
+          </p>
+          <button><a href="signup.html">Create account</a></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="script/signin.js">
+         
+</script>

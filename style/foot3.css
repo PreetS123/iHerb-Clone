@@ -1,0 +1,26 @@
+                
+
+                 #footinput {
+                    width: 60%;
+                    margin: auto;
+                    /* border: 1px solid black; */
+                   
+                  }
+                  #eml {
+                    width: 70%;
+                    height: 30px;
+                    margin: 20px 20px;
+                  }
+                  #sub {
+                    width: 20%;
+                    height: 35px;
+                    color: aliceblue;
+                    background-color: green;
+                    border: none;
+                  }
+                 
+                 .footbig{
+                     padding: 2%;
+                     border-top: 1px solid grey;
+                     text-align: center;
+                 }

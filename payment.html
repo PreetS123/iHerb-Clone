@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        #paymnt{
+            display: grid;
+            grid-template-columns: 40% 20%;
+            justify-content: space-between;
+            height: 550px;
+            border: 1px solid red;
+        }
+        #pyfrm{
+            padding: 2%;
+        }
+        #pyfrm>input{
+               height: 30px;
+               width: 100%;
+               margin: 15px auto;
+        }
+    </style>
+</head>
+<body>
+       <div id="paymnt">
+        <div id="fill">
+           <h1>Payment Details</h1>
+           <h3>Please fill out your information below</h3>
+                <div id="frm-inp">
+                    <form id="pyfrm">
+                    <label for="crdno">Card Name</label>
+                    <input type="number" placeholder="1234-5678-9012-3456" id="crdno" required>
+                    <label for="exp">Expiry Date</label>
+                    <input type="date" placeholder="mm/yy" id="exp" required>
+                    <label for="cv">CVC/CVV</label>
+                    <input type="number" placeholder="123" id="cv" required>
+                    <label for="mn">Name on Card</label>
+                    <input type="text" placeholder="Name" id="nm" >                
+                    <input type="submit" value="CONTINUE" id="paysub">
+                </form>
+                </div>
+              
+           </div>
+           <div id="paydis"></div>
+       </div>
+</body>
+</html>
+<script type="module">
+      
+</script>
