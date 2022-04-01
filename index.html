@@ -41,9 +41,33 @@
 
     </style>
   </head>
-  <script type="module" src="script/index.js" >
-   
+  <script type="module">
+      import navbar from "../component/nav.js";
+      let head= document.getElementById("topnav");
+      head.innerHTML= navbar();
+    //   console.log(head)
+
+      import  {footerdiv1, footerdiv2, footerdiv3, footerdiv4} from "../component/footer.js";
+             
+      // console.log(footerdiv1)
+      let foot1= document.getElementById("divfooter1");
+      foot1.innerHTML= footerdiv1()
+      // console.log(foot1);
+
+      let foot2= document.getElementById("divfooter2");
+      foot2.innerHTML= footerdiv2();
+      // console.log(foot2)
+
+      let foot3= document.getElementById("divfooter3");
+      foot3.innerHTML= footerdiv3();
+      // console.log(foot3)
+
+      let foot4= document.getElementById("divfooter4");
+      foot4.innerHTML= footerdiv4();
+      // console.log(foot4)
   </script>
+  <script src="script/index.js" > </script>
+
   <body>
     <div id="topnav"></div>
     <div id="slide">
@@ -108,15 +132,17 @@
     </div>
     <div id="navdiv">
       <div>
-        <p>
+       <p> <a class=".atindex"
+        href="fishoil.html">
           Fresh Oils And <br />
-          20% Off
+          20% Off</a>
         </p>
       </div>
       <div>
-        <p>
+        <p><a class=".atindex"
+          href="superfood.html">
           iHerb Brands <br />
-          50% Off
+          50% Off</a>
         </p>
       </div>
       <div>
@@ -141,18 +167,18 @@
         <div class="special1">
           <div>
             <div>
-              <img
+              <img class="indeximg"
                 src=" https://s3.images-iherb.com/now/now00372/k/35.jpg"
                 alt="broken"
               />
             </div>
             <div>
-              <button class="indexcart">ADD TO CART</button>
+              <!-- <button class="indexcart" onclick="addToCart()">ADD TO CART</button> -->
             </div>
           </div>
           <div>
             <div>
-              <a
+              <a class="des"
                 >California Gold Nutrition,<br />Gold C, Vitamin C,1000<br />mg,240
                 Veggie Capsule</a
               >
@@ -166,8 +192,8 @@
               <span class="material-icons"> star </span>
             </div>
             <div id="price_tag">
-              <span>601.07</span>
-              <span>1200.14</span>
+              <span   class="offerp">601.07</span>
+              <span class="strikep">1200.14</span>
             </div>
           </div>
         </div>
@@ -176,18 +202,18 @@
         <div class="special1">
           <div>
             <div>
-              <img
+              <img class="indeximg"
                 src="https://s3.images-iherb.com/bnl/bnl22651/c/3.jpg"
                 alt="broken"
               />
             </div>
             <div>
-              <button class="indexcart">ADD TO CART</button>
+              <!-- <button class="indexcart" onclick="addToCart()">ADD TO CART</button> -->
             </div>
             <div></div>
 
             <div>
-              <a>Banila Co, Clean It Zero, Cleansing Balm, Original </a>
+              <a class="des">Banila Co, Clean It Zero, Cleansing Balm, Original </a>
             </div>
 
             <div>
@@ -198,8 +224,8 @@
               <span class="material-icons"> star </span>
             </div>
             <div>
-              <span>601.07</span>
-              <span>1200.14</span>
+              <span  class="offerp">601.07</span>
+              <span class="strikep">1200.14</span>
             </div>
           </div>
         </div>
@@ -208,18 +234,18 @@
         <div class="special1">
           <div>
             <div>
-              <img
+              <img class="indeximg"
                 src="https://s3.images-iherb.com/gni/gni65359/c/2.jpg"
                 alt="broken"
               />
             </div>
             <div>
-              <button class="indexcart">ADD TO CART</button>
+              <!-- <button class="indexcart" onclick="addToCart()">ADD TO CART</button> -->
             </div>
           </div>
           <div>
             <div>
-              <a>G9skin, White In Milk Sun, SPF 50+ PA++++,40g </a>
+              <a class="des">G9skin, White In Milk Sun, SPF 50+ PA++++,40g </a>
             </div>
 
             <div>
@@ -230,8 +256,8 @@
               <span class="material-icons"> star </span>
             </div>
             <div>
-              <span>601.07</span>
-              <span>1200.14</span>
+              <span  class="offerp">601.07</span>
+              <span class="strikep">1200.14</span>
             </div>
           </div>
         </div>
@@ -240,18 +266,18 @@
         <div class="special1">
           <div>
             <div>
-              <img
+              <img class="indeximg"
                 src="https://s3.images-iherb.com/crx/crx47051/c/4.jpg"
                 alt="broken"
               />
             </div>
             <div>
-              <button class="indexcart">ADD TO CART</button>
+              <!-- <button class="indexcart" onclick="addToCart()" >ADD TO CART</button> -->
             </div>
           </div>
           <div>
             <div>
-              <a>Cosrx,Low pH Good Morning Gel Cleanser, 5.07 fl oz (150ml) </a>
+              <a class="des">Cosrx,Low pH Good Morning Gel Cleanser, 5.07 fl oz (150ml) </a>
             </div>
 
             <div>
@@ -262,8 +288,8 @@
               <span class="material-icons"> star </span>
             </div>
             <div>
-              <span>601.07</span>
-              <span>1200.14</span>
+              <span  class="offerp">801.07</span>
+              <span class="strikep">1000.14</span>
             </div>
           </div>
         </div>
@@ -272,17 +298,17 @@
         <div class="special1">
           <div>
             <div>
-              <img
+              <img class="indeximg"
                 src="https://s3.images-iherb.com/mhl/mhl05064/c/3.jpg"
                 alt="broken"
               />
             </div>
             <div>
-              <button class="indexcart">ADD TO CART</button>
+              <!-- <button class="indexcart" onclick="addToCart()">ADD TO CART</button> -->
             </div>
             <div></div>
             <div>
-              <a
+              <a class="des"
                 >Mediheal, Collagen, Essential Lifting & Firming Beauty Mask
               </a>
             </div>
@@ -295,8 +321,8 @@
               <span class="material-icons"> star </span>
             </div>
             <div>
-              <span>601.07</span>
-              <span>1200.14</span>
+              <span class="strikep">701.07</span>
+              <span   class="offerp">1100.14</span>
             </div>
           </div>
         </div>
@@ -305,18 +331,18 @@
         <div class="special1">
           <div>
             <div>
-              <img
+              <img class="indeximg"
                 src="https://s3.images-iherb.com/rse/rse01727/c/4.jpg"
                 alt="broken"
               />
             </div>
             <div>
-              <button class="indexcart">ADD TO CART</button>
+              <!-- <button class="indexcart" onclick="addToCart()">ADD TO CART</button> -->
             </div>
           </div>
           <div>
             <div>
-              <a>Radient Seoul, Balancing Charcoal Beauty Sheet Mask </a>
+              <a class="des">Radient Seoul, Balancing Charcoal Beauty Sheet Mask </a>
             </div>
 
             <div>
@@ -327,8 +353,8 @@
               <span class="material-icons"> star </span>
             </div>
             <div>
-              <span>601.07</span>
-              <span>1200.14</span>
+              <span   class="offerp">651.07</span>
+              <span class="strikep">1000.14</span>
             </div>
           </div>
         </div>
@@ -344,18 +370,18 @@
         <div class="trending1">
           <div>
             <div>
-              <img
+              <img class="indeximg"
                 src=" https://s3.images-iherb.com/now/now00372/k/35.jpg"
                 alt="broken"
               />
             </div>
             <div>
-              <button class="indexcart">ADD TO CART</button>
+              <!-- <button class="indexcart" onclick="addToCart()">ADD TO CART</button> -->
             </div>
           </div>
           <div>
             <div>
-              <a
+              <a class="des"
                 >California Gold Nutrition,<br />Gold C, Vitamin C,1000<br />mg,240
                 Veggie Capsule</a
               >
@@ -369,8 +395,8 @@
               <span class="material-icons"> star </span>
             </div>
             <div class="price_tag">
-              <span>601.07</span>
-              <span>1200.14</span>
+              <span   class="offerp">699.07</span>
+              <span class="strikep">900.14</span>
             </div>
           </div>
         </div>
@@ -379,18 +405,18 @@
         <div class="trending1">
           <div>
             <div>
-              <img
+              <img class="indeximg"
                 src="https://s3.images-iherb.com/miz/miz75159/k/5.jpg"
                 alt="broken"
               />
             </div>
             <div>
-              <button class="indexcart" >ADD TO CART</button>
+              <!-- <button class="indexcart"  onclick="addToCart()">ADD TO CART</button> -->
             </div>
           </div>
           <div>
             <div>
-              <a>Mizon Collange</a>
+              <a class="des">Mizon Collange</a>
             </div>
 
             <div>
@@ -401,8 +427,8 @@
               <span class="material-icons"> star </span>
             </div>
             <div class="price_tag">
-              <span>601.07</span>
-              <span>1200.14</span>
+              <span  class="offerp">1601.07</span>
+              <span class="strikep">2000.14</span>
             </div>
           </div>
         </div>
@@ -411,18 +437,18 @@
         <div class="trending1">
           <div>
             <div>
-              <img
+              <img class="indeximg"
                 src="https://s3.images-iherb.com/ezv/ezv72157/k/9.jpg"
                 alt="broken"
               />
             </div>
             <div>
-              <button class="indexcart">ADD TO CART</button>
+              <!-- <button class="indexcart" onclick="addToCart()">ADD TO CART</button> -->
             </div>
           </div>
           <div>
             <div>
-              <a>Elizaveccar CRE 100 Collangen</a>
+              <a class="des">Elizaveccar CRE 100 Collangen</a>
             </div>
 
             <div>
@@ -433,8 +459,8 @@
               <span class="material-icons"> star </span>
             </div>
             <div class="price_tag">
-              <span>601.07</span>
-              <span>1200.14</span>
+              <span  class="offerp">681.07</span>
+              <span class="strikep">1000.14</span>
             </div>
           </div>
         </div>
@@ -443,18 +469,18 @@
         <div class="trending1">
           <div>
             <div>
-              <img
+              <img class="indeximg"
                 src="https://s3.images-iherb.com/dev/dev00027/k/51.jpg"
                 alt="broken"
               />
             </div>
             <div>
-              <button class="indexcart">ADD TO CART</button>
+              <!-- <button class="indexcart" onclick="addToCart()">ADD TO CART</button> -->
             </div>
           </div>
           <div>
             <div>
-              <a>Deva, Vegan Vitamin D</a>
+              <a class="des">Deva, Vegan Vitamin D</a>
             </div>
 
             <div>
@@ -465,8 +491,8 @@
               <span class="material-icons"> star </span>
             </div>
             <div class="price_tag">
-              <span>601.07</span>
-              <span>1200.14</span>
+              <span  class="offerp">666.07</span>
+              <span class="strikep">800.14</span>
             </div>
           </div>
         </div>
@@ -475,18 +501,18 @@
         <div class="trending1">
           <div>
             <div>
-              <img
+              <img class="indeximg"
                 src="https://s3.images-iherb.com/atr/atr02929/k/19.jpg"
                 alt="broken"
               />
             </div>
             <div>
-              <button class="indexcart">ADD TO CART</button>
+              <!-- <button class="indexcart" onclick="addToCart()">ADD TO CART</button> -->
             </div>
           </div>
           <div>
             <div>
-              <a>Wobenzym N, Joint Tablets</a>
+              <a class="des">Wobenzym N, Joint Tablets</a>
             </div>
 
             <div>
@@ -497,8 +523,8 @@
               <span class="material-icons"> star </span>
             </div>
             <div class="price_tag">
-              <span>601.07</span>
-              <span>1200.14</span>
+              <span  class="offerp">701.07</span>
+              <span class="strikep">1280.14</span>
             </div>
           </div>
         </div>
@@ -507,18 +533,15 @@
         <div class="trending1">
           <div>
             <div>
-              <img
-                src="https://s3.images-iherb.com/lex/lex19456/k/70.jpg"
-                alt="broken"
-              />
+              <img class="indeximg" src="https://s3.images-iherb.com/lex/lex19456/k/70.jpg" alt="broken" />
             </div>
             <div>
-              <button class="indexcart">ADD TO CART</button>
+              <!-- <button class="indexcart" onclick="addToCart()">ADD TO CART</button> -->
             </div>
           </div>
           <div>
             <div>
-              <a>Life Extension Complete B Reflextion</a>
+              <a class="des">Life Extension Complete B Reflextion</a>
             </div>
 
             <div>
@@ -529,8 +552,8 @@
               <span class="material-icons"> star </span>
             </div>
             <div class="price_tag">
-              <span>120.07</span>
-              <span>200.14</span>
+              <span  class="offerp">120.07</span>
+              <span class="strikep">200.14</span>
             </div>
           </div>
         </div>
@@ -540,7 +563,7 @@
     <!-- unlock the power of beauty div start here -->
     <div id="unlock">
       <div>
-        <img
+        <img 
           src="	https://cdn.shopify.com/s/files/1/0399/1728/9633/files/StressCareA-Main-647x1024.png?v=1591359475"
           alt="broken"
         />
@@ -557,17 +580,17 @@
       </div>
     </div>
 
-    <div id="divfoot1">
+    <div id="divfooter1">
                
 
     </div>
-    <div id="divfoot2">
+    <div id="divfooter2">
 
     </div>
-    <div id="divfoot3">
+    <div id="divfooter3">
 
     </div>
-    <div id="divfoot4">
+    <div id="divfooter4">
 
     </div>
   </body>

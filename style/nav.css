@@ -5,6 +5,8 @@
     height: 70px;
     background-color: green;
     color: white;
+    position: relative;
+    /* position: fixed; */
    
     }
      #left {
@@ -34,4 +36,11 @@
     margin-right: 50px;
     /* border: 1px solid red; */
     }
- 
+    .atext{
+        color: white;
+       text-decoration: none;
+    }
+    .atext:hover{
+        color: white;
+        text-decoration: none;
+    }

@@ -10,7 +10,7 @@
   }
   #footinfo {
     padding: 0px;
-    height: 200px;
+    height: 250px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;

@@ -1,4 +1,4 @@
-#f-top {
+   #f-top {
     height: 300px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -7,18 +7,18 @@
     align-items: center;
     text-align: center;
     background-color: rgb(228, 183, 72);
-  }
-  #f-top > div {
+    }
+    #f-top > div {
     height: 80%;
     margin: auto;
     background-color: white;
     font-size: 12px;
-  }
-  .footer-img {
+    }
+   .footer-img {
     height: 30%;
     /* border: 1px solid red; */
-  }
-  #blogs {
+   }
+    #blogs {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
@@ -26,17 +26,17 @@
     align-items: center;
     height: 200px;
     /* border: 1px solid red; */
-    margin-top: 30px;
-  }
+     margin-top: 30px;
+   }
 
-  .fstblog > div {
+    .fstblog > div {
     height: 50%;
     /* border: 1px solid black; */
     text-align: center;
-  }
-  .fstblog > div > img {
+    }
+    .fstblog > div > img {
     height: 50%;
     width: 100%;
     border-radius: 10px;
-  }
+   }
 

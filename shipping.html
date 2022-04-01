@@ -6,19 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shipping</title>
     <style>
+
+         #navship{
+            background-color: green;
+            height: 70px;
+            width: 100%;
+            color: aliceblue;
+            display: grid;
+            grid-template-columns: 40% 40% 10%;
+            justify-content: space-between;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        #rightship{
+            display: grid;
+           grid-template-columns: repeat(3,1fr);
+        }
+        #leftship{
+           padding-right: 15%;
+           padding-top: 15%;
+          
+        }
         #shipping{
             height: 600px;
             margin: 40px auto;
             display: grid;
             grid-template-columns: 50% 30%;
             justify-content: space-between;
-            border:  1px solid red;
+            /* border:  1px solid red; */
         }
         #shipinfo{
-            border: 1px solid black;
-           display: block;
-           padding: 2%;
-           font-size: 20px;
+            border: 1px solid rgb(146, 144, 144);
+            border-radius: 10px;
+            display: block;
+            padding: 2%;
+            font-size: 20px;
+        }
+        .shiptxt{
+            color: white;
+            text-decoration: none;
         }
        
         #shipinfo>div>input{
@@ -29,14 +57,31 @@
         #radio{
             width: 20% !important;
         }
-        #country,#sub{
+        #country,#sub,#shipsub{
             width: 100%;
             height: 40px;
             margin: auto;
         }
+        #shipsub{
+            background-color: green;
+            border: none;
+            color: aliceblue;
+        }
+        #cart_total{
+            height: 400px;
+            border-radius: 30px;
+            border: 1px solid grey;
+            padding: 5%;
+            font-size: 25px;
+            background-color: rgb(235, 230, 230);
+            margin: 50px auto;
+        }
+       
     </style>
 </head>
 <body>
+    <div id="nav"></div>
+
       <div id="shipping">
          <div id="shipinfo">
              <div>
@@ -63,16 +108,48 @@
                 <input type="number" placeholder="Zip/Postal Code*" required>
                 <input type="number" placeholder="Mobile Number*" required>
                 <!-- <input type="submit" value="SUBMIT" id="sub"> -->
-                <button onclick="window.location.href='payment.html'">SUBMIT</button>
+                <button onclick="window.location.href='payment.html'" id="shipsub">SUBMIT</button>
             </div>
 
          </div>
          <div id="shipdisc">
-                   
+            <div id="cart_total">
+                <p>Order Summary</p>
+                  <h3 id="grand-total"></h3>
+                  <h3 id="discount"></h3>
+                  <h3 id="total-total"></h3>
+                  <h3 id="tax"></h3>
+                  <h3 id="final"></h3>
+            
+            </div>
          </div>
       </div>
        
 </body>
 </html>
-<script>
+<script type="module">
+
+    import navforship from "./component/shipnav.js";
+
+    let header= document.getElementById("nav");
+    header.innerHTML= navforship()
+    // console.log(header);
+
+    let cartArr= JSON.parse(localStorage.getItem("cartDetails"))
+    function showTotal(){
+          let grand= cartArr.reduce(function(acc,el){
+              return acc+(el.strike_price*el.qty)
+              return acc+(el.offer_price*el.qty)
+          },0);
+          let total= cartArr.reduce(function(acc,el){
+             
+              return acc+(el.offer_price*el.qty)
+          },0);
+          document.getElementById("grand-total").textContent =`ItemsTotal :   ${grand.toFixed(4)}`;
+          document.getElementById("total-total").textContent =`SubTotal :   ${total.toFixed(4)}`;
+          document.getElementById("discount").textContent=`Savings : -${(grand-total).toFixed(4)}`
+          document.getElementById("tax").textContent=`Tax&Duties : ${((grand-total)*0.1).toFixed(4)}`
+          document.getElementById("final").textContent=`Total : ${(total+((grand-total)*0.1)).toFixed(4)}`
+      }
+      showTotal();
 </script>

@@ -4,14 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- google font link -->
+     <link
+     rel="stylesheet"
+     href="https://fonts.googleapis.com/icon?family=Material+Icons"
+   />
+
+   <!-- font awesome link -->
+   <script
+     src="https://kit.fontawesome.com/5b6d880526.js"
+     crossorigin="anonymous"
+   ></script>
     <title>Payment</title>
     <style>
+         #navship{
+            background-color: green;
+            height: 70px;
+            width: 100%;
+            color: aliceblue;
+            display: grid;
+            grid-template-columns: 40% 40% 10%;
+            justify-content: space-between;
+           
+        }
+        .shiptxt{
+            color: white;
+            text-decoration: none;
+        }
+        
+        #rightship{
+            display: grid;
+           grid-template-columns: repeat(3,1fr);
+        }
+        #leftship{
+           padding-right: 15%;
+           padding-top: 15%;
+          
+        }
         #paymnt{
             display: grid;
-            grid-template-columns: 40% 20%;
+            grid-template-columns: 40% 30%;
             justify-content: space-between;
             height: 550px;
-            border: 1px solid red;
+            margin-bottom: 100px;
+            /* border: 1px solid red; */
+        }
+        #fill{
+            border: 1px solid rgb(202, 201, 201);
+            margin: 30px;
+            border-radius: 20px;
+            padding: 2%;
+            
         }
         #pyfrm{
             padding: 2%;
@@ -21,12 +64,32 @@
                width: 100%;
                margin: 15px auto;
         }
+        #paysub{
+            background-color: green;
+            color: aliceblue;
+            border: none;
+        }
+       #fill> h1,h3{
+            text-align: center;
+        }
+        #cart_total{
+            height: 400px;
+            border-radius: 30px;
+            border: 1px solid grey;
+            padding: 5%;
+            font-size: 25px;
+            background-color: rgb(235, 230, 230);
+            margin: 50px auto;
+        }
+       
     </style>
 </head>
 <body>
+    <div id="nav"></div>
        <div id="paymnt">
         <div id="fill">
            <h1>Payment Details</h1>
+           <hr>
            <h3>Please fill out your information below</h3>
                 <div id="frm-inp">
                     <form id="pyfrm">
@@ -43,10 +106,56 @@
                 </div>
               
            </div>
-           <div id="paydis"></div>
+          
+            <div id="cart_total">
+                <p>Order Summary</p>
+                  <h3 id="grand-total"></h3>
+                  <h3 id="discount"></h3>
+                  <h3 id="total-total"></h3>
+                  <h3 id="tax"></h3>
+                  <h3 id="final"></h3>
+            
+            </div>
+           
        </div>
+       <hr>
+       <div id="divfooter3">
+
+    </div>
+       <div id="divfooter4">
+
+    </div>
 </body>
 </html>
 <script type="module">
-      
+       import navforship from "./component/shipnav.js";
+
+       let header= document.getElementById("nav");
+        header.innerHTML= navforship()
+        // console.log(header);
+
+        import {footerdiv1,footerdiv2,footerdiv3,footerdiv4} from "./component/footer.js"
+          
+
+       let foot4= document.getElementById("divfooter4");
+       foot4.innerHTML= footerdiv4()
+    //    console.log(foot4);
+        
+    let cartArr= JSON.parse(localStorage.getItem("cartDetails"))
+    function showTotal(){
+          let grand= cartArr.reduce(function(acc,el){
+              return acc+(el.strike_price*el.qty)
+              return acc+(el.offer_price*el.qty)
+          },0);
+          let total= cartArr.reduce(function(acc,el){
+             
+              return acc+(el.offer_price*el.qty)
+          },0);
+          document.getElementById("grand-total").textContent =`ItemsTotal :   ${grand.toFixed(4)}`;
+          document.getElementById("total-total").textContent =`SubTotal :   ${total.toFixed(4)}`;
+          document.getElementById("discount").textContent=`Savings : -${(grand-total).toFixed(4)}`
+          document.getElementById("tax").textContent=`Tax&Duties : ${((grand-total)*0.1).toFixed(4)}`
+          document.getElementById("final").textContent=`Total : ${(total+((grand-total)*0.1)).toFixed(4)}`
+      }
+      showTotal();
 </script>

@@ -102,9 +102,17 @@ button:hover{
 
 .filter{
   display: grid;
+  grid-template-columns: 15% 15%;
+  padding: 1%;
   padding-left:-33px;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   height: 50px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  margin: 20px 0px;
+  background-color: rgba(119, 117, 117, 0.2);
+}
+#sorting,#searchf{
+  height: 35px;
+  border-radius: 10px;
+  border: none;
 }
