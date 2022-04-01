@@ -20,10 +20,14 @@
   padding: 10px;
   line-height: 30px;
 }
-
+#container>div>img{
+  width: 70%;
+  height: 50%;
+  margin: auto;
+}
 .checked{
  color: yellow;
-/* border: 1px solid gray; */
+
 }
 .un{
  color:rgb(171, 174, 14);
@@ -34,7 +38,7 @@
 .rating > span:hover:before {
   content: "\2605";
   position: absolute;
-} */
+} 
 
 .rating {
   unicode-bidi: bidi-override;
@@ -58,13 +62,10 @@
 .price{
   display: flex;
   justify-content: space-around;
-  /* margin-top: 10px; */
-  /* border: 1px solid gray; */
 }
 
 button{
   position: relative;
-    /* z-index: 2; */
     display: none;
     position: absolute;
     margin-left: 100px;

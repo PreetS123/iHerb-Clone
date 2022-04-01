@@ -140,6 +140,12 @@
        let foot4= document.getElementById("divfooter4");
        foot4.innerHTML= footerdiv4()
     //    console.log(foot4);
+
+     document.getElementById("pyfrm").addEventListener("submit",shippingtravel);
+     function shippingtravel(event){
+         event.preventDefault();
+         window.location.href="shipping.html";
+     }
         
     let cartArr= JSON.parse(localStorage.getItem("cartDetails"))
     function showTotal(){

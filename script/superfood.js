@@ -61,28 +61,28 @@ var iherbpage=[
     },
     // edit from here
     {
-        img_url:"https://s3.images-iherb.com/smi/smi39001/c/2.jpg",
-        desc:"Some By Mi, 30 Days Miracle Clear Spot Patch,18 Patches",
+        img_url:"https://s3.images-iherb.com/pif/pif50743/r/24.jpg",
+        desc:"Some By Mi, 30 Days Miracle Turmerid Paste,18 Patches",
         id:"4160",
-        offer_price:241.14,
-        strike_price:301.43
+        offer_price:541.14,
+        strike_price:801.43
     },
     {
-        img_url:"https://s3.images-iherb.com/ptt/ptt80359/c/23.jpg",
-        desc:"Petitfee, Gold Hydrogen Eye Patch, 60 Pieces",
+        img_url:"https://s3.images-iherb.com/nav/nav02075/r/14.jpg",
+        desc:"Petitfee, Navitas Coca Butter, 60 Pieces",
         id:"31772",
-        offer_price:618.14,
-        strike_price:773.43
+        offer_price:118.14,
+        strike_price:373.43
     },
     {
-        img_url:"https://s3.images-iherb.com/smi/smi33366/c/2.jpg",
-        desc:"Some By Mi, AHA, BHA, PHA 30 Days Miracle Toner,150ml",
+        img_url:"https://s3.images-iherb.com/amh/amh50205/r/29.jpg",
+        desc:"Some By Mi,Super Papaya Enzyme Plus,150ml",
         id:"8121",
-        offer_price:1374.14,
-        strike_price:1500.43
+        offer_price:374.14,
+        strike_price:450.43
     },
     {
-        img_url:"https://s3.images-iherb.com/rse/rse01732/c/0.jpg",
+        img_url:"https://s3.images-iherb.com/amx/amx20264/r/29.jpg",
         desc:"Radient Seoul;, Hydrating Beauty Sheet , 1 Sheet Mask, 0.85 oz (25ml)",
         id:"8681",
         offer_price:80.14,
@@ -90,60 +90,59 @@ var iherbpage=[
     },
     {
         img_url:"https://s3.images-iherb.com/rse/rse01957/c/2.jpg",
-        desc:"Radient Seoul , Hydrating Bubble Cleansing Oil",
+        desc:"All Flex , Radient Joint All In One ForMilk",
         id:"4800",
-        offer_price:91.14,
-        strike_price:320.43
+        offer_price:901.14,
+        strike_price:1320.43
     },
     {
-        img_url:"https://s3.images-iherb.com/hei/hei76067/c/21.jpg",
-        desc:"Heimish , All Clean Balm, 120",
+        img_url:"https://s3.images-iherb.com/thr/thr33602/r/21.jpg",
+        desc:"Heimish , Thorne Green Tea",
         id:"11015",
-        offer_price:980.14,
+        offer_price:1080.14,
         strike_price:1230.43
     },
     {
-        img_url:"https://s3.images-iherb.com/rse/rse01727/c/4.jpg",
-        desc:"Radient Seoul, Balancing Charcoal Beauty Sheet Mask",
+        img_url:"https://s3.images-iherb.com/now/now04732/r/19.jpg",
+        desc:"WOW Seoul, Organio Oil",
         id:"8325",
-        offer_price:64.14,
-        strike_price:121.43
+        offer_price:164.14,
+        strike_price:221.43
     },
     {
-        img_url:"https://s3.images-iherb.com/ptt/ptt80182/c/28.jpg",
-        desc:"Petitfee, Black Pearl & Gold Hydrogen Eye Patch",
+        img_url:"https://s3.images-iherb.com/nrt/nrt01947/r/29.jpg",
+        desc:"Nature's Baunty , Milk Thirstle,100ml",
         id:"24149",
-        offer_price:612.14,
-        strike_price:701.43
+        offer_price:1612.14,
+        strike_price:1701.43
     },
     {
-        img_url:"https://s3.images-iherb.com/mhl/mhl05064/c/3.jpg",
-        desc:"Mediheal, Collagen, Essential Lifting & Firming Beauty Mask",
+        img_url:"https://s3.images-iherb.com/jrw/jrw18019/r/22.jpg",
+        desc:"Mediheal, Collagen, B-12 Floart, P-5-P",
         id:"5015",
-        offer_price:161.14 ,
-        strike_price:101.43
+        offer_price:1161.14 ,
+        strike_price:1501.43
       },
     {
-        img_url:"https://s3.images-iherb.com/ide/ide01942/c/2.jpg",
-        desc:"Idealove, Rose to the Occassion, 1 Beauty Sheet Mask",
+        img_url:"https://s3.images-iherb.com/car/car01653/k/25.jpg",
+        desc:"The herry Fincher , Fish Oil",
         id:"1208",
-      strike_price:201.43,
-        offer_price:80.14,
-        strike_price:101.43
+        offer_price:1800.14,
+        strike_price:2101.43
     },
     {
-        img_url:"https://s3.images-iherb.com/crx/crx47051/c/4.jpg",
-        desc:"Cosrx,Low pH Good Morning Gel Cleanser, 5.07 fl oz (150ml)",
+        img_url:"https://s3.images-iherb.com/rna/rna80025/k/10.jpg",
+        desc:"Cosrx,Ammature Hair Care oz (150ml)",
         id:"11996",
-        offer_price:771.14,
-        strike_price:801.43
+        offer_price:1771.14,
+        strike_price:1801.43
     },
     {
-        img_url:"https://s3.images-iherb.com/gni/gni65359/c/2.jpg",
-        desc:"G9skin, White In Milk Sun, SPF 50+ PA++++,40g",
+        img_url:"https://s3.images-iherb.com/vtp/vtp49447/k/8.jpg",
+        desc:"Vital Protein , Collange Pepetides",
         id:"2255",
-        offer_price:823.14,
-        strike_price:901.43
+        offer_price:2823.14,
+        strike_price:3901.43
      }
   ]
   

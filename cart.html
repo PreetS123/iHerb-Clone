@@ -121,8 +121,9 @@ import navbar from "./component/nav.js";
            
       function displayCart(cartArr){
         //   console.log(cartArr);
+           cart_item.innerHTML=null;
              abc()
-          cart_item.innerHTML=null;
+         
           cartArr.map(function(el,index,array){
               let div= document.createElement("div");
                

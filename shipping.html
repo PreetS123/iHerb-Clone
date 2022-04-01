@@ -49,7 +49,7 @@
             text-decoration: none;
         }
        
-        #shipinfo>div>input{
+        #shipinfo>div>form>input{
             height: 30px;
             width: 100%;
             margin:10px auto;
@@ -100,15 +100,17 @@
             </div>
 
             <div>
+                <form id="pyfrm">
                 <input type="text" placeholder="Full Name *" id="user" required>
-                <input type="email" placeholder="Address Line1 *" id="add1" required>
-                <input type="email" placeholder="Address Line2" id="add2">
+                <input type="text" placeholder="Address Line1 *" id="add1" required>
+                <input type="text" placeholder="Address Line2" id="add2">
                 <input type="text" placeholder="City *" id="city" required>
                 <input type="text" placeholder="State/Region*" id="state" required>
                 <input type="number" placeholder="Zip/Postal Code*" required>
                 <input type="number" placeholder="Mobile Number*" required>
-                <!-- <input type="submit" value="SUBMIT" id="sub"> -->
-                <button onclick="window.location.href='payment.html'" id="shipsub">SUBMIT</button>
+                <input type="submit" value="SUBMIT" id="sub">
+            </form>
+                <!-- <button onclick="redirect()" id="shipsub">SUBMIT</button> -->
             </div>
 
          </div>
@@ -134,6 +136,13 @@
     let header= document.getElementById("nav");
     header.innerHTML= navforship()
     // console.log(header);
+
+    document.getElementById("pyfrm").addEventListener("submit",shipping);
+     function shipping(event){
+         event.preventDefault();
+         alert('Order Sucessful. Keep Shopping with Us')
+         window.location.href="index.html";
+     }
 
     let cartArr= JSON.parse(localStorage.getItem("cartDetails"))
     function showTotal(){
