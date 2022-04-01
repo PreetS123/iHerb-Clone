@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/724ae640f4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <link rel="stylesheet" href="style/superfood.css">
+  <link rel="stylesheet" href="style/nav.css">
+  <link rel="stylesheet" href="style/foot1.css">
+  <link rel="stylesheet" href="style/foot2.css">
+  <link rel="stylesheet" href="style/foot3.css">
+  <link rel="stylesheet" href="style/foot4.css">
+
+
+  
+  <title>FishOil Page</title>
+</head>
+<body>
+  <div id="topnav">
+   
+  </div>
+
+  <div class="filter">
+    <input id="searchf"  onkeyup="search()">
+   <select onclick="sortItem()" id ="sorting">
+    <option value="">Sort Products</option>
+     <option value="l2h">Price:Low to High</option>
+     <option value="h2l"> Price:High to Low</option>
+   </select>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div id="container">
+   
+  </div>
+  <div id="divfooter1">
+               
+
+  </div>
+  <div id="divfooter2">
+
+  </div>
+  <div id="divfooter3">
+
+  </div>
+  <div id="divfooter4">
+
+  </div>
+</body>
+</html>
+<script type="module">
+  import  navbar from "./component/nav.js"
+       document.getElementById("topnav").innerHTML=navbar()
+
+       import  {footerdiv1, footerdiv2, footerdiv3, footerdiv4} from "../component/footer.js";
+             
+            //  console.log(footerdiv1)
+             let foot1= document.getElementById("divfooter1");
+             foot1.innerHTML= footerdiv1()
+             // console.log(foot1);
+         
+             let foot2= document.getElementById("divfooter2");
+             foot2.innerHTML= footerdiv2();
+             // console.log(foot2)
+         
+             let foot3= document.getElementById("divfooter3");
+             foot3.innerHTML= footerdiv3();
+             // console.log(foot3)
+         
+             let foot4= document.getElementById("divfooter4");
+             foot4.innerHTML= footerdiv4();
+            //  console.log(foot4)
+         
+</script>
+<script src="./script/superfood.js">
+</script>

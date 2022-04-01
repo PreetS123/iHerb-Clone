@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="style/nav.css">
+    <title>Document</title>
+    <style>
+        #count-item{
+            height: 100px;
+            font-size: 25px;
+            border-bottom: 1px solid grey;
+            padding: 2%;
+        }
+        #cart_page{
+            display: grid;
+            grid-template-columns: 60% 30%;
+            justify-content: space-around;
+            /* border: 1px solid black; */
+            /* height: 700px; */
+            padding: 5%;
+        }
+        /* #cart_item{
+             
+            border: 1px solid red;
+        } */
+        #cart_item>div{
+            display: grid;
+            /* margin: 20px auto; */
+            border-bottom: 2px solid rgb(154, 156, 154);
+            margin-bottom: 20px;
+            /* flex-direction: row; */
+            grid-template-columns: 40% 30% 20%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2%;
+            background-color: rgb(235, 230, 230);
+        }
+        #cart_total{
+            height: 500px;
+            border-radius: 30px;
+            border: 1px solid grey;
+            padding: 5%;
+            font-size: 25px;
+            background-color: rgb(235, 230, 230);
+        }
+        #cartp{
+           
+            display: flex;
+            justify-content: space-between;
+            padding: 5%;
+            
+        }
+        #cartcontinue{
+            width: 100%;
+            height: 40px;
+            background-color: red;
+            border: none;
+            color: white;
+            margin: auto;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+        #divfooter4{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="topnav"></div>
+       <div id="count-item">
+           
+       </div>
+    <div id="cart_page">
+        <div id="cart_item">
+
+        </div>
+        <div id="cart_total">
+            <p>Order Summary</p>
+              <h3 id="grand-total"></h3>
+              <h3 id="discount"></h3>
+              <h3 id="total-total"></h3>
+              <h3 id="tax"></h3>
+              <h3 id="final"></h3>
+
+              <button id="cartcontinue" onclick="window.location.href='payment.html'">Proceed to checkout</button>
+             
+        </div>
+    </div>
+    <div id="divfooter4">
+
+    </div>
+</body>
+</html>
+<script type="module">
+
+import navbar from "./component/nav.js";
+       let headfish= document.getElementById("topnav");
+       headfish.innerHTML= navbar();
+         
+       import  {footerdiv1, footerdiv2, footerdiv3, footerdiv4} from "../component/footer.js";
+       let foot4= document.getElementById("divfooter4");
+    foot4.innerHTML= footerdiv4();
+    // console.log(foot4)
+
+      let cartArr= JSON.parse(localStorage.getItem("cartDetails"));
+            // let No= cartArr.length 
+            function abc(){
+              
+                let sum=0; 
+                for(let i=0; i<cartArr.length; i++)
+                {
+                     sum+=cartArr[i]["qty"]
+                }
+                  let quant= document.getElementById("count-item").innerHTML= sum+ "  items in cart"
+                  
+            }
+           
+      function displayCart(cartArr){
+        //   console.log(cartArr);
+           cart_item.innerHTML=null;
+             abc()
+         
+          cartArr.map(function(el,index,array){
+              let div= document.createElement("div");
+               
+            //   here I am creating div for image and name only 
+              let div_img= document.createElement("div")
+              let image= document.createElement("img");
+              image.src= el.img_url;
+
+              let name= document.createElement("p");
+              name.innerText= el.desc;
+                
+              let price= document.createElement("p");
+              price.setAttribute("id","cartp")
+              let price1= document.createElement("span")
+              price.innerText= el.offer_price;
+              let price2= document.createElement("span")
+              price2.innerText= el.strike_price;
+              price2.style.textDecoration="line-through" 
+              price.append(price1,price2)
+              div_img.append(image,name,price);
+                  
+            //   creating div for increasing and decresing count of a particular item
+              let btndiv= document.createElement("div");
+
+              let plus= document.createElement("button");
+              plus.innerText="+";
+              plus.addEventListener("click",function(){
+                  increment(index);
+              })
+              let qtydisplay= document.createElement("span")
+              qtydisplay.innerText= el.qty;
+              let minus= document.createElement("button");
+              minus.innerText="-";
+              minus.addEventListener("click",function(){
+                  decrement(index);
+              })
+              btndiv.append(plus,qtydisplay,minus);
+
+            //   now need to create a div for removeing the item
+            let btn= document.createElement("button")
+            btn.textContent="Remove";
+            btn.addEventListener("click",removecart)
+            function removecart(){
+                let p1= array.slice(0,index)
+                let p2= array.slice(index+1,array.length);
+                p1= p1.concat(p2);
+                localStorage.removeItem("cartDetails");
+                localStorage.setItem("cartDetails",JSON.stringify(p1))
+                let displayCart= JSON.parse(localStorage.getItem("cartDetails"))
+                console.log(displayCart)
+                document.location.reload();
+            }
+            div.append(div_img,btndiv,btn)
+            cart_item.append(div)
+
+            
+          })
+      }
+     
+    
+
+      function increment(index){
+        abc()
+         if( cartArr[index].qty<=20){
+            cartArr[index].qty++;
+            localStorage.setItem("cartDetails",JSON.stringify(cartArr))
+           
+         }
+         showTotal()
+        displayCart(cartArr)
+      }
+      function decrement(index){
+        abc()
+        if( cartArr[index].qty>1){
+           cartArr[index].qty--;
+           localStorage.setItem("cartDetails",JSON.stringify(cartArr))
+        }
+        showTotal()
+       displayCart(cartArr)
+     }
+      
+      function showTotal(){
+          let grand= cartArr.reduce(function(acc,el){
+              return acc+(el.strike_price*el.qty)
+              return acc+(el.offer_price*el.qty)
+          },0);
+          let total= cartArr.reduce(function(acc,el){
+             
+              return acc+(el.offer_price*el.qty)
+          },0);
+          document.getElementById("grand-total").textContent =`ItemsTotal :   ${grand.toFixed(4)}`;
+          document.getElementById("total-total").textContent =`SubTotal :   ${total.toFixed(4)}`;
+          document.getElementById("discount").textContent=`Savings : -${(grand-total).toFixed(4)}`
+          document.getElementById("tax").textContent=`Tax&Duties : ${((grand-total)*0.1).toFixed(4)}`
+          document.getElementById("final").textContent=`Total : ${(total+((grand-total)*0.1)).toFixed(4)}`
+      }
+      showTotal();
+      displayCart(cartArr);
+</script>

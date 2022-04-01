@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Roboto+Condensed:wght@300&display=swap');
+
+*{
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Fredoka', sans-serif;
+}
+
+#container{
+  display:grid;
+  grid-template-columns:repeat(4,320px);
+  grid-template-rows: 400px 400px 400px 400px ;
+  /* justify-content: center; */
+  text-align: center;
+  justify-content: center;
+}
+
+#container>div{
+  border: 1px solid gray;
+  padding: 10px;
+  line-height: 30px;
+}
+#container>div>img{
+  width: 70%;
+  height: 50%;
+  margin: auto;
+}
+.checked{
+ color: yellow;
+
+}
+.un{
+ color:rgb(171, 174, 14);
+}
+
+
+
+.rating > span:hover:before {
+  content: "\2605";
+  position: absolute;
+} 
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.7rem;
+  font-size:30px;
+} 
+.rating > span:hover:before,
+.rating {
+   content: "\2605";
+   position: absolute;
+   color: yellow;
+   /* border: 1px solid gray; */
+  
+}
+
+.price{
+  display: flex;
+  justify-content: space-around;
+}
+
+button{
+  position: relative;
+    display: none;
+    position: absolute;
+    margin-left: 100px;
+    height: 35px;
+    width: 100px;
+    margin-top: -30px;
+    background-color: orange;
+    border: 0ch;
+    color: white;
+    border-radius: 4px;
+}
+
+button:hover{
+  background-color: rgba(19, 23, 27,0.8);
+  
+}
+
+
+
+#container>div{
+  position: relative;
+}
+
+#container>div:hover button{
+  display: block;
+}
+
+#content>div{
+  height: 50px;
+}
+
+#strappendp{
+  margin-top: 10px;
+}
+
+.filter{
+  display: grid;
+  grid-template-columns: 15% 15%;
+  padding: 1%;
+  padding-left:-33px;
+  justify-content: space-evenly;
+  height: 50px;
+  width: 100%;
+  margin: 20px 0px;
+  background-color: rgba(119, 117, 117, 0.2);
+}
+#sorting,#searchf{
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+}

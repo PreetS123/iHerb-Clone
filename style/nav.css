@@ -1,0 +1,60 @@
+    #nav {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    gap: 20px;
+    height: 70px;
+    background-color: green;
+    color: white;
+    position: relative;
+    /* position: fixed; */
+   
+    }
+     #left {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    }
+    #newbtn > button {
+    border: none;
+    text-align: center;
+    margin: 20px auto;
+    background-color: azure;
+    border-radius: 20px;
+    height: 30px;
+    width: 70px;
+   }
+    #right {
+    display: grid;
+    gap: 20px;
+    grid-template-columns:  60% 25%;
+    justify-content: space-between;
+    margin: auto;
+    margin-right: 50px;
+    /* border: 1px solid red; */
+    }
+    .atext{
+        color: white;
+       text-decoration: none;
+    }
+    .atext:hover{
+        color: white;
+        text-decoration: none;
+    }
+       
+    ul{
+      list-style-type: none;
+    }
+    #travelup{
+        display: none;
+       
+        
+    
+      }
+      #travelpage:hover #travelup{
+        display: block;
+        list-style-type: none;
+      }
