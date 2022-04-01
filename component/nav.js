@@ -17,8 +17,8 @@
                      <ul>
                       <li>Account/Rewards
                       <ul id="travelup">
-                      <li><a href="signup.html">SignUp</a></li>
-                      <li><a href="signin.html">SignIn</a></li>
+                      <li><a href="signup.html" class="atext">SignUp</a></li>
+                      <li><a href="signin.html"  class="atext">SignIn</a></li>
                       </ul>
                       </li>
                       </ul>
@@ -30,13 +30,4 @@
                    `
                }
                export default navbar
-
-
-            //    <select id="acc">
-            //    <option value="">Account/Rewards</option>
-            //     <option value="up" id="up">SignUp</option>
-            //    <option value="in" id="in">SignIn</option>
-            //  </select>
-               
-
                       
