@@ -70,7 +70,33 @@
     </style>
 </head>
 <body>
-    <div id="topnav"></div>
+    <div id="topnav">
+        <div id="nav">
+            <div id="left">
+              <div >
+                <h1><a class="atext" href="index.html">iHerb</a></h1>
+              </div>
+              <div><h3>Shop</h3></div>
+              <div><h3>Brand</h3></div>
+              <div><h3>Help With</h3></div>
+              <div id="newbtn"><button>New</button></div>
+            </div>
+            <div id="middle"></div>
+            <div id="right">
+              <div id="travelpage">
+              <ul>
+               <li>Account/Rewards
+               <ul id="travelup">
+               <li><a href="signup.html" class="atext">SignUp</a></li>
+               <li><a href="signin.html"  class="atext">SignIn</a></li>
+               </ul>
+               </li>
+               </ul>
+              </div>
+              <div ><a href="cart.html" class="atext"><span class="material-icons" > shopping_cart </span></a></div>
+            </div>
+          </div>
+    </div>
        <div id="count-item">
            
        </div>
@@ -91,20 +117,24 @@
         </div>
     </div>
     <div id="divfooter4">
-
+        <div class="footbig"> 
+            <div id="footbottom">
+              <p>
+                iHerb.com © Copyright 1997-2022 iHerb, LLC. All rights reserved. iHerb®
+                is a registered trademark of iHerb, LLC. Trusted Brands. Healthy
+                Rewards. and the iHerb.com Trusted Brands. Healthy Rewards. Logo are
+                trademarks of iHerb, LLC. *Disclaimer: Statements made, or products sold
+                through this website, have not been evaluated by the United States Food
+                and Drug Administration. They are not intended to diagnose, treat, cure
+                or prevent any disease. Read more »
+              </p>
+              <p><a href="#">Privacy Policy </a> | <a href="#"> Terms of Use </a> | <a href="#"> Accessibility </a></p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
-<script type="module">
-
-import navbar from "./component/nav.js";
-       let headfish= document.getElementById("topnav");
-       headfish.innerHTML= navbar();
-         
-       import  {footerdiv1, footerdiv2, footerdiv3, footerdiv4} from "../component/footer.js";
-       let foot4= document.getElementById("divfooter4");
-    foot4.innerHTML= footerdiv4();
-    // console.log(foot4)
+<script>
 
       let cartArr= JSON.parse(localStorage.getItem("cartDetails"));
             // let No= cartArr.length 

@@ -85,7 +85,20 @@
     </style>
 </head>
 <body>
-    <div id="nav"></div>
+    <div id="nav">
+        <div id="navship">
+            <div id="rightship">
+              <div><h1><a class="shiptxt" href="index.html">iHerb*</a></h1></div>
+              <div><h3>Payment</h3></div>
+              <div><h3>Shipping</h3></div>
+            </div>
+            <div id="middleship"></div>
+            <div id="leftship">
+             
+             <span><a class="shiptxt" href="cart.html">Go To Cart</a></span>
+            </div>
+          </div>
+    </div>
        <div id="paymnt">
         <div id="fill">
            <h1>Payment Details</h1>
@@ -120,26 +133,53 @@
        </div>
        <hr>
        <div id="divfooter3">
-
+        <div class="footbig"> 
+            <div id="footinput">
+              <form action="" id="footinp">
+                <input type="email" id="eml" />
+                <input value="Sign In" type="submit" id="sub" />
+              </form>
+              <p>
+                Your email address will be used to send you Health Newsletters and
+                emails about iHerb’s products, services, sales, and special offers. You
+                can unsubscribe at any time by clicking on the unsubscribe link in each
+                email. For more information on our use of your personal information and
+                your rights, see our <a href="#">Privacy Policy</a>.
+              </p>
+              <p>
+                This site is protected by reCAPTCHA and the Google Privacy Policy and
+                Terms of Service apply.
+              </p>
+              <div>
+                <a href="https://www.facebook.com/iherb/"> <i class="fa fa-google"></i></a>
+                <a href="https://twitter.com/iherb"> <i class="fa fa-twitter"></i></a>
+                <a href="https://www.youtube.com/c/iherb"> <i class="fa fa-youtube"></i></a>
+                <a href="https://in.pinterest.com/iherb/_created/"> <i class="fa fa-p"></i></a>
+                <a href="https://www.instagram.com/iherb/"> <i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+        </div>
     </div>
        <div id="divfooter4">
-
+        <div class="footbig"> 
+            <div id="footbottom">
+              <p>
+                iHerb.com © Copyright 1997-2022 iHerb, LLC. All rights reserved. iHerb®
+                is a registered trademark of iHerb, LLC. Trusted Brands. Healthy
+                Rewards. and the iHerb.com Trusted Brands. Healthy Rewards. Logo are
+                trademarks of iHerb, LLC. *Disclaimer: Statements made, or products sold
+                through this website, have not been evaluated by the United States Food
+                and Drug Administration. They are not intended to diagnose, treat, cure
+                or prevent any disease. Read more »
+              </p>
+              <p><a href="#">Privacy Policy </a> | <a href="#"> Terms of Use </a> | <a href="#"> Accessibility </a></p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
-<script type="module">
-       import navforship from "./component/shipnav.js";
-
-       let header= document.getElementById("nav");
-        header.innerHTML= navforship()
-        // console.log(header);
-
-        import {footerdiv1,footerdiv2,footerdiv3,footerdiv4} from "./component/footer.js"
-          
-
-       let foot4= document.getElementById("divfooter4");
-       foot4.innerHTML= footerdiv4()
-    //    console.log(foot4);
+<script>
+     
 
      document.getElementById("pyfrm").addEventListener("submit",shippingtravel);
      function shippingtravel(event){

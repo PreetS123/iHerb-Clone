@@ -80,7 +80,20 @@
     </style>
 </head>
 <body>
-    <div id="nav"></div>
+    <div id="nav">
+        <div id="navship">
+            <div id="rightship">
+              <div><h1><a class="shiptxt" href="index.html">iHerb*</a></h1></div>
+              <div><h3>Payment</h3></div>
+              <div><h3>Shipping</h3></div>
+            </div>
+            <div id="middleship"></div>
+            <div id="leftship">
+             
+             <span><a class="shiptxt" href="cart.html">Go To Cart</a></span>
+            </div>
+          </div>
+    </div>
 
       <div id="shipping">
          <div id="shipinfo">
@@ -129,13 +142,8 @@
        
 </body>
 </html>
-<script type="module">
+<script>
 
-    import navforship from "./component/shipnav.js";
-
-    let header= document.getElementById("nav");
-    header.innerHTML= navforship()
-    // console.log(header);
 
     document.getElementById("pyfrm").addEventListener("submit",shipping);
      function shipping(event){

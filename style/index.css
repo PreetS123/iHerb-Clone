@@ -56,24 +56,6 @@
     align-items: center;
   }
 
-  /* .indexcart {
-    position: relative;
-    display: none;
-   position: absolute; 
-
-    height: 35px;
-    width: 100px;
-    background-color: orange;
-    border: 0ch;
-    color: white;
-    border-radius: 4px;
-  } */
-  /* .indexcart:hover {
-    background-color: rgba(19, 23, 27, 0.8);
-  }
-  .special1 > div:hover .indexcart {
-    display: block;
-  } */
     .strikep{
       text-decoration: line-through;
     }
