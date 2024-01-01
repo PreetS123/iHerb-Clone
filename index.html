@@ -60,7 +60,9 @@
             </li>
           </ul>
         </div>
-        <div><a href="cart.html" class="atext"><span class="material-icons"> shopping_cart </span></a></div>
+        <div id="cartDiv">
+          <a href="cart.html" class="atext" id="cartLink"><span class="material-icons"> shopping_cart </span></a>
+        </div>
       </div>
     </div>
   </div>
@@ -786,5 +788,27 @@
   </div>
   <script src="script/index.js"> </script>
 </body>
+<script>
+  
+function isTokenAvailable() {
+  // Checking if "signUpDetails" key exists and is true
+  return !!localStorage.getItem("signUpDetails");
+}
 
+document.addEventListener("DOMContentLoaded", function () {
+  var cartLink = document.getElementById("cartLink");
+
+  if (!isTokenAvailable()) {
+    // disabling the cart link if token is not present
+    cartLink.classList.add("disabled");
+    cartLink.removeAttribute("href");
+
+    cartLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      console.log("Token not available. Please sign up.");
+    });
+  }
+});
+
+</script>
 </html>

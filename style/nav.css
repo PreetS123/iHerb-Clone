@@ -44,6 +44,12 @@
         color: white;
         text-decoration: none;
     }
+    /* css for disabling cart button */
+    .atext.disabled {
+      opacity: 0.5; /* Adjust the opacity as needed */
+      cursor: not-allowed;
+      pointer-events: none;
+    }
        
     ul{
       list-style-type: none;
